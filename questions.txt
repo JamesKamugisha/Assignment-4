@@ -1,0 +1,3 @@
+(1) In plot-multi.png, I noticed that the processes took longer compared to plot-single.png. This makes sense because several matrix multiplications are running at the same time and sharing the available CPU resources.
+(2) In plot-taskset.png, the processes took longer than in plot-multi.png. Since taskset forces all the processes to use the same CPU, they have to take turns using it instead of being spread across different CPUs. This shows the effect of timesharing more clearly.
+(3) In plot-nice.png, I noticed differences between the processes because they were given different priorities. The processes with a higher nice value had lower priority, while the ones with a lower nice value had higher priority. This affected how the CPU time was shared between them.
